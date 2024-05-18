@@ -1,0 +1,28 @@
+@font-face {
+  font-family: DengJuGengShaHeiTi;
+  src: url(/fonts/等距更纱黑体.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Number;
+  src: url('/fonts/Number.woff2');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: DengJuGengShaHeiTi;
+}
+
+body {
+  background-color: var(--color-bg-1);
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  /* font-family: Oppo; */
+  overflow: hidden;
+}
