@@ -23,44 +23,64 @@ const columns = [
 
 const data = [
   {
-    site: '老君智慧城站',
-    value: '管制刀具',
-    date: '12:00',
+    site: '三江口',
+    value: '辐射性物品',
+    date: '12:00:00',
   },
   {
-    site: '老君智慧城站',
-    value: '管制刀具',
-    date: '12:00',
+    site: '下洋',
+    value: '易燃品',
+    date: '12:00:00',
   },
   {
-    site: '老君智慧城站',
-    value: '管制刀具',
-    date: '12:00',
+    site: '梁厝',
+    value: '枪支弹药',
+    date: '12:00:00',
   },
   {
-    site: '老君智慧城站',
-    value: '管制刀具',
-    date: '12:00',
+    site: '安平',
+    value: '管制药品',
+    date: '12:00:00',
   },
   {
-    site: '老君智慧城站',
-    value: '管制刀具',
-    date: '12:00',
+    site: '福州火车南站',
+    value: '管制药品',
+    date: '12:00:00',
   },
   {
-    site: '老君智慧城站',
-    value: '管制刀具',
-    date: '12:00',
+    site: '胪雷',
+    value: '管制药品',
+    date: '12:00:00',
   },
   {
-    site: '老君智慧城站',
+    site: '白湖亭',
     value: '管制刀具',
-    date: '12:00',
+    date: '12:00:00',
   },
   {
-    site: '老君智慧城站',
+    site: '三叉口',
     value: '管制刀具',
-    date: '12:00',
+    date: '12:00:00',
+  },
+  {
+    site: '上藤',
+    value: '管制刀具',
+    date: '12:00:00',
+  },
+  {
+    site: '达道',
+    value: '管制刀具',
+    date: '12:00:00',
+  },
+  {
+    site: '茶亭',
+    value: '管制刀具',
+    date: '12:00:00',
+  },
+  {
+    site: '南门兜',
+    value: '管制刀具',
+    date: '12:00:00',
   },
 ]
 </script>

@@ -38,6 +38,36 @@ const data = [
     value: '30次',
     date: '12:00:00',
   },
+  {
+    project: '检修设备',
+    value: '15次',
+    date: '12:00:00',
+  },
+  {
+    project: '备用设备',
+    value: '12次',
+    date: '12:00:00',
+  },
+  {
+    project: '新上线设备',
+    value: '8次',
+    date: '12:00:00',
+  },
+  {
+    project: '返修设备',
+    value: '10次',
+    date: '12:00:00',
+  },
+  {
+    project: '待处理设备',
+    value: '18次',
+    date: '12:00:00',
+  },
+  {
+    project: '已处理设备',
+    value: '25次',
+    date: '12:00:00',
+  },
 ]
 </script>
 <!-- <style lang="scss" scoped></style> -->

@@ -26,42 +26,52 @@ const columns = [
 
 const data = [
   {
-    site: '天河智慧城站',
+    site: '橘园洲',
     value: '50K',
     date: '12:00',
   },
   {
-    site: '天河智慧城站',
+    site: '洪湾',
     value: '50K',
     date: '12:00',
   },
   {
-    site: '天河智慧城站',
+    site: '金山',
     value: '50K',
     date: '12:00',
   },
   {
-    site: '天河智慧城站',
+    site: '金祥',
     value: '50K',
     date: '12:00',
   },
   {
-    site: '天河智慧城站',
+    site: '祥坂',
     value: '50K',
     date: '12:00',
   },
   {
-    site: '天河智慧城站',
+    site: '宁化',
     value: '50K',
     date: '12:00',
   },
   {
-    site: '天河智慧城站',
+    site: '西洋',
     value: '50K',
     date: '12:00',
   },
   {
-    site: '天河智慧城站',
+    site: '南门兜',
+    value: '50K',
+    date: '12:00',
+  },
+  {
+    site: '水部',
+    value: '50K',
+    date: '12:00',
+  },
+  {
+    site: '紫阳',
     value: '50K',
     date: '12:00',
   },

@@ -2,7 +2,7 @@
   <BasePanel title="预警待处理">
     <div class="warning-pending">
       <div class="item">
-        <div class="item-title">待处理可疑人员</div>
+        <div class="item-title">待处理可疑人</div>
         <div class="item-value">900</div>
       </div>
       <div class="item">

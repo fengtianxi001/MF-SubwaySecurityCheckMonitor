@@ -23,8 +23,6 @@ import { map, max, min } from 'lodash'
     height: 100%;
     background-color: #8689b450;
     border: 1px solid rgba(255, 255, 255, 20.6%);
-
-    // border: 1px solid #8689b4;
   }
 }
 </style>

@@ -38,6 +38,36 @@ const data = [
     value: '30人',
     date: '12:00:00',
   },
+  {
+    project: '安检人员数',
+    value: '20人',
+    date: '12:00:00',
+  },
+  {
+    project: '维修人员数',
+    value: '10人',
+    date: '12:00:00',
+  },
+  {
+    project: '紧急联系人数',
+    value: '5人',
+    date: '12:00:00',
+  },
+  {
+    project: '特殊人员数',
+    value: '3人',
+    date: '12:00:00',
+  },
+  {
+    project: '临时人员数',
+    value: '2人',
+    date: '12:00:00',
+  },
+  {
+    project: '其他人员数',
+    value: '1人',
+    date: '12:00:00',
+  },
 ]
 </script>
 <!-- <style lang="scss" scoped></style> -->
