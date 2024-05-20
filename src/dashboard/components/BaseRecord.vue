@@ -38,11 +38,7 @@ const configs = computed<any[]>(() => {
 .base-record {
   width: 100%;
   .base-record-row {
-    height: 22px;
-
-    // .base-record-column {
-    //   //
-    // }
+    height: 30px;
   }
 }
 </style>

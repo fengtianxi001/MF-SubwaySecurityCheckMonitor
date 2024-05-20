@@ -1,7 +1,5 @@
 <template>
-  <BasePanel title="趋势">
-    <div class="warning-trend" ref="container"></div>
-  </BasePanel>
+  <div class="condition-chart" ref="container"></div>
 </template>
 <script setup lang="ts">
 import { onMounted } from 'vue'
@@ -13,7 +11,6 @@ const { container, setOption } = useEcharts()
 const generateOptions = (sources: any[][]) => {
   const minValue = map(sources, (source) => min(source))
   const maxValue = map(sources, (source) => max(source))
-
   return {
     tooltip: {
       trigger: 'axis',
@@ -58,7 +55,12 @@ const generateOptions = (sources: any[][]) => {
         symbol: 'none',
         smooth: true,
         itemStyle: {
-          color: '#77cbfa',
+          color: '#4ebcf5',
+        },
+        tooltip: {
+          itemStyle: {
+            color: '#4ebcf5',
+          },
         },
         data: sources[0],
       },
@@ -68,8 +70,9 @@ const generateOptions = (sources: any[][]) => {
         symbol: 'none',
         smooth: true,
         itemStyle: {
-          color: '#6229a6',
+          color: '#9292c1',
         },
+
         data: sources[1],
       },
     ],
@@ -78,17 +81,15 @@ const generateOptions = (sources: any[][]) => {
 
 onMounted(() => {
   const sources = [
-    [1645, 1549, 1933, 1063, 1436, 1847, 1263],
-    [1464, 1485, 1405, 1852, 1091, 1659, 1923],
+    [1120, 1619, 1342, 1970, 1344, 1156, 1370],
+    [1962, 1446, 1516, 1507, 1137, 1792, 1966],
   ]
-  console.log('sources', sources)
   const options = generateOptions(sources)
   setOption(options)
 })
 </script>
 <style lang="scss" scoped>
-.warning-trend {
-  width: 100%;
-  height: 100%;
+.condition-chart {
+  height: 180px;
 }
 </style>

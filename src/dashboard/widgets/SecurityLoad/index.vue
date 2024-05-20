@@ -1,52 +1,46 @@
 <template>
   <BasePanel title="安检负荷率">
     <div class="security-load">
-      <div class="item">
-        <div class="item-chart"></div>
+      <div class="item" v-for="item in sources">
+        <LoadChart />
         <div class="item-info">
-          <div class="item-info-title">总综合负荷率</div>
-          <div class="item-info-value">
-            <span>99/103</span>
-            <span>
-              <span>30%</span>
-              <span class="fa-solid fa-arrow-trend-up"></span>
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item-chart"></div>
-        <div class="item-info">
-          <div class="item-info-title">总综合负荷率</div>
-          <div class="item-info-value">
-            <span>99/103</span>
-            <span>
-              <span>30%</span>
-              <span class="fa-solid fa-arrow-trend-up"></span>
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item-chart"></div>
-        <div class="item-info">
-          <div class="item-info-title">总综合负荷率</div>
-          <div class="item-info-value">
-            <span>99/103</span>
-            <span>
-              <span>30%</span>
-              <span class="fa-solid fa-arrow-trend-up"></span>
-            </span>
-          </div>
+          <div class="item-info-title">{{ item.title }}</div>
+          <span class="item-info-value">{{ item.value }}</span>
+          <BaseChangeIndicator
+            label="较昨天同时间"
+            :value="item.trendValue"
+            :status="item.trendStatus"
+          />
         </div>
       </div>
     </div>
   </BasePanel>
 </template>
 <script setup lang="ts">
-import BasePanel from '../../components/BasePanel.vue'
-// interface PropsType {}
-// const props = defineProps<PropsType>()
+import LoadChart from './LoadChart.vue'
+const sources = [
+  {
+    title: '总综合负荷率',
+    value: '99/103',
+    percent: 80,
+    trendValue: '+30%',
+    trendStatus: 'up',
+  },
+  {
+    title: '总综合负荷率',
+    value: '99/103',
+    percent: 80,
+    trendValue: '+30%',
+    trendStatus: 'up',
+  },
+  {
+    title: '总综合负荷率',
+    value: '99/103',
+    percent: 80,
+    trendValue: '+30%',
+    trendStatus: 'up',
+  },
+]
 </script>
 <style lang="scss" scoped>
 .security-load {
@@ -59,35 +53,18 @@ import BasePanel from '../../components/BasePanel.vue'
     align-items: center;
     justify-content: center;
     width: 100%;
-
-    // background-color: red;
-    .item-chart {
-      width: 80px;
-      height: 80px;
-      margin-right: 20px;
-      background-color: #2f3049;
-      border-radius: 50%;
-    }
     .item-info {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 6px;
+      align-items: start;
       .item-info-title {
-        font-size: 18px;
+        font-size: 17px;
       }
       .item-info-value {
-        margin-top: 6px;
-        & > span:first-child {
-          margin-right: 10px;
-          font-size: 30px;
-          font-weight: bold;
-        }
-        & > span:last-child {
-          gap: 10px;
-          font-size: 14px;
-          font-weight: bold;
-          color: #5eff5a;
-          span {
-            margin-right: 6px;
-          }
-        }
+        margin-right: 10px;
+        font-size: 30px;
+        font-weight: bold;
       }
     }
   }

@@ -2,7 +2,7 @@
   <div class="base-panel" :style="layoutStyle">
     <div class="panel-header">
       <div class="panel-header-left">
-        <i class="panel-header-icon" :class="icon"></i>
+        <i class="panel-header-icon fa-solid" :class="icon"></i>
         <span class="panel-header-title">{{ title }}</span>
       </div>
       <div class="panel-header-right">
@@ -25,7 +25,7 @@ interface PropsType {
 
 const props = withDefaults(defineProps<PropsType>(), {
   title: '',
-  icon: 'fa-solid fa-user',
+  icon: 'fa-grid-2',
   row: 1,
   column: 1,
 })

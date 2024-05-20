@@ -6,9 +6,6 @@
   </BasePanel>
 </template>
 <script setup lang="ts">
-import BasePanel from '../../components/BasePanel.vue'
-import BaseRecord from '../../components/BaseRecord.vue'
-
 const columns = [
   {
     name: '项目',

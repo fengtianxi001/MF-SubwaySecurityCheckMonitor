@@ -13,7 +13,7 @@
   </BasePanel>
 </template>
 <script setup lang="ts">
-import BasePanel from '../../components/BasePanel.vue'
+// import BasePanel from '../../components/BasePanel.vue'
 // interface PropsType {}
 // const props = defineProps<PropsType>()
 </script>
@@ -32,11 +32,9 @@ import BasePanel from '../../components/BasePanel.vue'
     width: 100%;
     height: 100%;
     padding: 10px;
-
-    // background-color: #db22fe;
     .item-title {
       width: 100%;
-      font-size: 18px;
+      font-size: 16px;
     }
     .item-value {
       width: 100%;

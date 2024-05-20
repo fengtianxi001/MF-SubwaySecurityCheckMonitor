@@ -1,7 +1,5 @@
 <template>
-  <BasePanel title="趋势">
-    <div class="warning-trend" ref="container"></div>
-  </BasePanel>
+  <div class="condition-chart" ref="container"></div>
 </template>
 <script setup lang="ts">
 import { onMounted } from 'vue'
@@ -58,7 +56,7 @@ const generateOptions = (sources: any[][]) => {
         symbol: 'none',
         smooth: true,
         itemStyle: {
-          color: '#77cbfa',
+          color: '#982bf2',
         },
         data: sources[0],
       },
@@ -68,7 +66,7 @@ const generateOptions = (sources: any[][]) => {
         symbol: 'none',
         smooth: true,
         itemStyle: {
-          color: '#6229a6',
+          color: '#9292c1',
         },
         data: sources[1],
       },
@@ -87,8 +85,7 @@ onMounted(() => {
 })
 </script>
 <style lang="scss" scoped>
-.warning-trend {
-  width: 100%;
-  height: 100%;
+.condition-chart {
+  height: 180px;
 }
 </style>
