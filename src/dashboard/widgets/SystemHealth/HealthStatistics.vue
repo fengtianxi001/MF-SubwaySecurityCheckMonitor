@@ -9,7 +9,7 @@
 <style lang="scss" scoped>
 .health-statistics {
   .statistics-value {
-    font-size: 80px;
+    font-size: 60px;
     font-weight: bolder;
   }
   .statistics-tip {

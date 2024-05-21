@@ -4,12 +4,13 @@
       <ChartItem />
       <div class="item-info">
         <div class="item-info-title">{{ item.title }}</div>
-        <span class="item-info-value">{{ item.value }}</span>
-        <BaseChangeIndicator
-          label="较昨天同时间"
-          :value="item.trendValue"
-          :status="item.trendStatus"
-        />
+        <div style="display: flex; align-items: baseline">
+          <span class="item-info-value">{{ item.value }}</span>
+          <BaseChangeIndicator
+            :value="item.trendValue"
+            :status="item.trendStatus"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -19,15 +20,15 @@ import ChartItem from './ChartItem.vue'
 
 const sources = [
   {
-    title: '总综合负荷率',
-    value: '99/103',
+    title: '安检员总数',
+    value: '99',
     percent: 80,
     trendValue: '+30%',
     trendStatus: 'up',
   },
   {
-    title: '总综合负荷率',
-    value: '99/103',
+    title: '违规总次数',
+    value: '103',
     percent: 80,
     trendValue: '+30%',
     trendStatus: 'up',
@@ -39,12 +40,12 @@ const sources = [
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 25px;
+  margin-top: 15px;
   .chart-item {
     display: flex;
     align-items: center;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     .item-chart {
       width: 60px;
       height: 60px;
@@ -55,14 +56,14 @@ const sources = [
     .item-info {
       display: flex;
       flex-direction: column;
-      grid-gap: 6px;
+      grid-gap: 4px;
       align-items: start;
       .item-info-title {
         font-size: 17px;
       }
       .item-info-value {
         margin-right: 10px;
-        font-size: 30px;
+        font-size: 36px;
         font-weight: bold;
       }
     }

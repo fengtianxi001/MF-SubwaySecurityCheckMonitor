@@ -26,7 +26,7 @@ const iconName = computed(() => {
 <style lang="scss" scoped>
 .base-change-indicator {
   display: flex;
-  grid-gap: 10px;
+  grid-gap: 6px;
   .indicator-label {
     color: #9292c1;
   }

@@ -8,7 +8,7 @@
 import { useEcharts } from '@/dashboard/hooks/useEcharts'
 import { onMounted } from 'vue'
 
-const { container, setOption } = useEcharts()
+const { container, echarts, setOption } = useEcharts()
 onMounted(() => {
   const options = {
     series: [
@@ -26,8 +26,18 @@ onMounted(() => {
           show: false,
         },
         data: [
-          { value: 90, name: 'Search Engine', itemStyle: { color: '#6949fb' } },
-          { value: 10, name: 'Direct', itemStyle: { color: '#000' } },
+          {
+            value: 90,
+            name: 'Search Engine',
+            itemStyle: {
+              borderRadius: 10,
+              color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [
+                { offset: 0, color: '#de38fb' },
+                { offset: 1, color: '#6732f3' },
+              ]),
+            },
+          },
+          { value: 10, name: 'Direct', itemStyle: { color: '#141428' } },
         ],
       },
     ],

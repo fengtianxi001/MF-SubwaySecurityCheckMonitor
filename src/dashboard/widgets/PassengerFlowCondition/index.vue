@@ -5,14 +5,12 @@
 </template>
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { map, max, min, range, sampleSize } from 'lodash'
+import { range, sampleSize } from 'lodash'
 import useEcharts from '@/dashboard/hooks/useEcharts'
 
-const { container, setOption } = useEcharts()
+const { container, echarts, setOption } = useEcharts()
 
 const generateOptions = (sources: any[][]) => {
-  const minValue = map(sources, (source) => min(source))
-  const maxValue = map(sources, (source) => max(source))
   return {
     tooltip: {
       trigger: 'axis',
@@ -27,7 +25,6 @@ const generateOptions = (sources: any[][]) => {
       right: '2%',
       bottom: '12%',
       top: '5%',
-      // containLabel: true,
     },
     xAxis: {
       type: 'category',
@@ -61,49 +58,36 @@ const generateOptions = (sources: any[][]) => {
         name: '重点乘客',
         type: 'bar',
         itemStyle: {
-          color: '#5a7bf7',
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+            { offset: 0, color: '#32fedb' },
+            { offset: 1, color: '#319cfc' },
+          ]),
         },
-        barGap: 0,
         barWidth: 20,
         data: sources[0],
       },
-      {
-        name: '常乘客',
-        type: 'bar',
-        itemStyle: {
-          color: '#78d8e9',
-        },
-        barGap: 0,
-        barWidth: 20,
-        data: sources[1],
-      },
+
       {
         name: '管控人员',
         type: 'bar',
         itemStyle: {
-          color: '#992bf2',
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+            { offset: 0, color: '#de38fb' },
+            { offset: 1, color: '#6732f3' },
+          ]),
         },
-        barGap: 0,
         barWidth: 20,
         data: sources[2],
       },
       // {
-      //   name: '失信人员',
+      //   name: '常乘客',
       //   type: 'bar',
       //   itemStyle: {
-      //     color: '#9494bf',
+      //     color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+      //       { offset: 0, color: '#ebebfe' },
+      //       { offset: 1, color: '#8589b3' },
+      //     ]),
       //   },
-      //   barGap: 0,
-      //   barWidth: 20,
-      //   data: sources[2],
-      // },
-      // {
-      //   name: '失信人员',
-      //   type: 'bar',
-      //   itemStyle: {
-      //     color: '#eb4b3c',
-      //   },
-      //   barGap: 0,
       //   barWidth: 20,
       //   data: sources[1],
       // },

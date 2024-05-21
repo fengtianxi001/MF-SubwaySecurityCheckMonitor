@@ -6,7 +6,7 @@ import { onMounted } from 'vue'
 import { map, max, min } from 'lodash'
 import useEcharts from '@/dashboard/hooks/useEcharts'
 
-const { container, setOption } = useEcharts()
+const { container, echarts, setOption } = useEcharts()
 
 const generateOptions = (sources: any[][]) => {
   const minValue = map(sources, (source) => min(source))
@@ -55,11 +55,15 @@ const generateOptions = (sources: any[][]) => {
         symbol: 'none',
         smooth: true,
         itemStyle: {
-          color: '#4ebcf5',
+          color: '#00CBFE',
         },
-        tooltip: {
-          itemStyle: {
-            color: '#4ebcf5',
+        lineStyle: {
+          normal: {
+            width: 3,
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: '#32fedb' },
+              { offset: 1, color: '#319cfc' },
+            ]),
           },
         },
         data: sources[0],
@@ -72,7 +76,12 @@ const generateOptions = (sources: any[][]) => {
         itemStyle: {
           color: '#9292c1',
         },
-
+        lineStyle: {
+          normal: {
+            width: 3,
+            color: '#9292c1',
+          },
+        },
         data: sources[1],
       },
     ],

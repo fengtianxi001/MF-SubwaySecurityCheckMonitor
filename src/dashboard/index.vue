@@ -23,7 +23,6 @@
   </div>
 </template>
 <script setup lang="ts">
-import BaseHeader from '../dashboard/components/BaseHeader.vue'
 import PassengerCondition from './widgets/PassengerCondition/index.vue'
 import BaggageCondition from './widgets/BaggageCondition/index.vue'
 import PassengerFlowCondition from './widgets/PassengerFlowCondition/index.vue'

@@ -11,7 +11,7 @@
 import { useEcharts } from '@/dashboard/hooks/useEcharts'
 import { onMounted } from 'vue'
 
-const { container, setOption } = useEcharts()
+const { container, echarts, setOption } = useEcharts()
 onMounted(() => {
   const options = {
     series: [
@@ -33,10 +33,46 @@ onMounted(() => {
           show: false,
         },
         data: [
-          { value: 90, name: 'Search', itemStyle: { color: '#0d7cfb' } },
-          { value: 10, name: 'Direct', itemStyle: { color: '#ffcb44' } },
-          { value: 10, name: 'Direct', itemStyle: { color: '#ff382e' } },
-          { value: 10, name: 'Direct', itemStyle: { color: '#8589b8' } },
+          {
+            value: 90,
+            name: 'Search',
+            itemStyle: {
+              color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [
+                { offset: 0, color: '#de38fb' },
+                { offset: 1, color: '#6732f3' },
+              ]),
+            },
+          },
+          {
+            value: 10,
+            name: 'Direct',
+            itemStyle: {
+              color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [
+                { offset: 0, color: '#32fedb' },
+                { offset: 1, color: '#319cfc' },
+              ]),
+            },
+          },
+          {
+            value: 10,
+            name: 'Direct',
+            itemStyle: {
+              color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [
+                { offset: 0, color: '#ffd244' },
+                { offset: 1, color: '#ff362e' },
+              ]),
+            },
+          },
+          {
+            value: 10,
+            name: 'Direct',
+            itemStyle: {
+              color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [
+                { offset: 0, color: '#8689b4' },
+                { offset: 1, color: '#ffffff' },
+              ]),
+            },
+          },
         ],
       },
     ],
