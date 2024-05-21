@@ -66,7 +66,18 @@ const generateOptions = (sources: any[][]) => {
         barWidth: 20,
         data: sources[0],
       },
-
+      {
+        name: '常乘客',
+        type: 'bar',
+        itemStyle: {
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+            { offset: 0, color: '#f7cd5e' },
+            { offset: 0.8, color: '#ee8149' },
+          ]),
+        },
+        barWidth: 20,
+        data: sources[1],
+      },
       {
         name: '管控人员',
         type: 'bar',
@@ -79,18 +90,6 @@ const generateOptions = (sources: any[][]) => {
         barWidth: 20,
         data: sources[2],
       },
-      // {
-      //   name: '常乘客',
-      //   type: 'bar',
-      //   itemStyle: {
-      //     color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-      //       { offset: 0, color: '#ebebfe' },
-      //       { offset: 1, color: '#8589b3' },
-      //     ]),
-      //   },
-      //   barWidth: 20,
-      //   data: sources[1],
-      // },
     ],
   }
 }

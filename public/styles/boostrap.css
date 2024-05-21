@@ -1,13 +1,13 @@
 @font-face {
   font-family: DengJuGengShaHeiTi;
-  src: url(/fonts/等距更纱黑体.ttf);
+  src: url(/fonts/等距更纱黑体.woff2);
   font-weight: normal;
 }
 
-@font-face {
+/* @font-face {
   font-family: Number;
   src: url('/fonts/Number.woff2');
-}
+} */
 
 * {
   padding: 0;
